@@ -1,0 +1,21 @@
+---
+-hosts: localhost
+  connection: local
+  remote_user: user1
+  become: yes
+  gather_facts: noaw
+  vars_files:
+      - awscreds.yml
+  tasks:
+     - name: provisoning
+       ec2:
+          aws_access_key: "{{aws_access_key_id}}"
+          aws_secret_key: "{{aws_secret_access_key}}"
+          region: "{{aws_region}}"
+          image: ami-b70554c8
+          instance_type: t2.micro
+          vpc_subnet_id: subnet-0fb1f588761dc47bf
+          assign_public_ip: yes
+          group_id: sg-03b6cad2638621183
+          key_name: general
+~                         
