@@ -1,3 +1,0 @@
-http://www.riturajcse.com/2017/12/using-ansible-for-deploying.html
-
-http://www.nickhammond.com/load-balancing-with-aws-and-ansible/
